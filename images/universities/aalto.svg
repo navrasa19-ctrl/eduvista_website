@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="280" height="85">
+  <g transform="translate(10, 15)">
+    <rect width="60" height="60" fill="#000000" rx="4"/>
+    <text x="30" y="44" fill="#FFCC00" font-family="'Arial Black', Impact, sans-serif" font-size="34" font-weight="900" text-anchor="middle">A!</text>
+  </g>
+  <text x="84" y="44" fill="#000000" font-family="'Arial Black', Impact, sans-serif" font-size="26" font-weight="900" letter-spacing="1">Aalto</text>
+  <text x="84" y="68" fill="#475569" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="bold">University</text>
+  <text x="84" y="84" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="11">SCIENCE • ART • TECHNOLOGY</text>
+</svg>

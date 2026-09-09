@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="270" height="85">
+  <!-- DNA Helix Spiral Emblem -->
+  <g transform="translate(10, 10)">
+    <circle cx="40" cy="40" r="38" fill="#f0fdfa" stroke="#00A3AD" stroke-width="2"/>
+    <!-- Abstract Helix Spiral -->
+    <path d="M 22,25 C 35,15 55,20 60,35 C 65,50 45,65 30,60 C 18,55 22,35 38,30 C 50,26 55,42 48,50" fill="none" stroke="#00A3AD" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M 32,20 C 45,28 48,45 38,55 C 28,65 45,68 55,58" fill="none" stroke="#002D62" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- Text -->
+  <text x="95" y="38" fill="#002D62" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" letter-spacing="0.5">brighton and sussex</text>
+  <text x="95" y="62" fill="#00A3AD" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="0.5">medical school</text>
+  <text x="95" y="80" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="10.5">Universities of Brighton &amp; Sussex</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="260" height="85">
+  <!-- Imperial Blue Crest Shield -->
+  <g transform="translate(10, 10)">
+    <path d="M 5,0 L 55,0 Q 60,0 60,5 L 60,40 Q 60,75 30,82 Q 0,75 0,40 L 0,5 Q 0,0 5,0 Z" fill="#003E74"/>
+    <!-- Shield Division & Crown/Emblems -->
+    <line x1="0" y1="40" x2="60" y2="40" stroke="#ffffff" stroke-width="2"/>
+    <line x1="30" y1="0" x2="30" y2="82" stroke="#ffffff" stroke-width="2"/>
+    <!-- Stylized Crown -->
+    <path d="M 20,20 L 22,28 L 38,28 L 40,20 L 34,24 L 30,16 L 26,24 Z" fill="#E8B923"/>
+    <circle cx="20" cy="56" r="5" fill="#E8B923"/>
+    <circle cx="40" cy="56" r="5" fill="#E8B923"/>
+  </g>
+  <!-- Text -->
+  <text x="82" y="40" fill="#003E74" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5">Imperial College</text>
+  <text x="82" y="66" fill="#003E74" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5">London</text>
+</svg>

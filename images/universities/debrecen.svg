@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="280" height="85">
+  <g transform="translate(10, 10)">
+    <circle cx="40" cy="40" r="38" fill="#1C355E"/>
+    <circle cx="40" cy="40" r="33" fill="none" stroke="#E5A823" stroke-width="2"/>
+    <path d="M 40,20 L 52,56 L 28,56 Z" fill="#E5A823"/>
+  </g>
+  <text x="96" y="42" fill="#1C355E" font-family="'Times New Roman', Georgia, serif" font-size="19" font-weight="bold">UNIVERSITY OF</text>
+  <text x="96" y="66" fill="#E5A823" font-family="'Times New Roman', Georgia, serif" font-size="23" font-weight="bold">DEBRECEN</text>
+  <text x="96" y="82" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="11">DEBRECENI EGYETEM • 1538</text>
+</svg>

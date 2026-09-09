@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="280" height="85">
+  <g transform="translate(10, 10)">
+    <circle cx="40" cy="40" r="38" fill="#1B365D"/>
+    <path d="M 40,18 L 54,58 L 26,58 Z" fill="#D99B26"/>
+  </g>
+  <text x="96" y="40" fill="#1B365D" font-family="'Times New Roman', Georgia, serif" font-size="18" font-weight="bold">UNIVERSIDADE</text>
+  <text x="96" y="64" fill="#D99B26" font-family="'Times New Roman', Georgia, serif" font-size="22" font-weight="bold">DE LISBOA</text>
+  <text x="96" y="80" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="11">UNIVERSITY OF LISBON • 1290</text>
+</svg>

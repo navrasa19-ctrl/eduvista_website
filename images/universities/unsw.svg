@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="260" height="85">
+  <!-- UNSW Shield -->
+  <g transform="translate(10, 8)">
+    <path d="M 0,0 L 60,0 Q 64,0 64,5 L 64,46 Q 64,80 32,86 Q 0,80 0,46 Z" fill="#FFCC00"/>
+    <!-- Black Chief with Stars -->
+    <path d="M 0,0 L 60,0 Q 64,0 64,5 L 64,28 L 0,28 Z" fill="#000000"/>
+    <circle cx="18" cy="14" r="3.5" fill="#ffffff"/>
+    <circle cx="32" cy="14" r="3.5" fill="#ffffff"/>
+    <circle cx="46" cy="14" r="3.5" fill="#ffffff"/>
+    <!-- Lion on Gold Body -->
+    <ellipse cx="32" cy="54" rx="12" ry="14" fill="#000000"/>
+    <rect x="24" y="48" width="16" height="12" rx="1.5" fill="#ffffff"/>
+  </g>
+  <!-- Text -->
+  <text x="84" y="44" fill="#000000" font-family="'Arial Black', Impact, sans-serif" font-size="28" font-weight="900" letter-spacing="2">UNSW</text>
+  <text x="84" y="70" fill="#000000" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" letter-spacing="1.5">SYDNEY</text>
+</svg>

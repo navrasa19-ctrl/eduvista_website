@@ -1,0 +1,616 @@
+/*
+ * Plugin: Web Slide Navigation System
+ * EduVista - Modern Responsive Navigation & Desktop Dropdowns
+*/
+
+/*------------------------------------------*/
+/*  Base CSS
+/*------------------------------------------*/
+
+.wsmenu html,
+.wsmenu body,
+.wsmenu iframe,
+.wsmenu h1,
+.wsmenu h2,
+.wsmenu h3,
+.wsmenu h4,
+.wsmenu h5,
+.wsmenu h6 {
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: antialiased;
+  font-smooth: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.wsmenu .cl {
+  clear: both;
+}
+
+.wsmenu img,
+object,
+embed,
+video {
+  border: 0 none;
+  max-width: 100%;
+}
+
+.wsmenu a:focus {
+  outline: none;
+}
+
+.wsmenu:before,
+.wsmenu:after {
+  content: "";
+  display: table;
+}
+
+.wsmenu:after {
+  clear: both;
+}
+
+/*------------------------------------------*/
+/*  Desktop Main Menu CSS
+/*------------------------------------------*/
+
+.wsmainfull {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 2px 3px rgba(96, 96, 96, .1);
+  transition: all 450ms ease-in-out;
+}
+
+.wsmainwp {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header Logo */
+.desktoplogo {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  line-height: 70px;
+  flex-shrink: 0;
+}
+
+.desktoplogo img {
+  vertical-align: middle;
+  max-height: 85px;
+}
+
+.smllogo img {
+  max-height: 65px;
+}
+
+/* ==========================================================================
+   DESKTOP NAVIGATION MENU (min-width: 992px)
+   ========================================================================== */
+
+.wsmenu {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 70px;
+  margin-left: auto;
+}
+
+.wsmenu > a {
+  display: inline-flex;
+  align-items: center;
+  color: #2c3e50;
+  font-family: 'Muli', 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 8px 6px;
+  height: 70px;
+  line-height: 1;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+
+.wsmenu > a:hover,
+.wsmenu > a.active {
+  color: #ff4500;
+}
+
+.wsmenu > a::after {
+  content: '';
+  position: absolute;
+  bottom: 16px;
+  left: 6px;
+  right: 6px;
+  height: 2.5px;
+  background-color: #ff4500;
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.wsmenu > a:hover::after,
+.wsmenu > a.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.wsmenu > a.header-btn::after {
+  display: none !important;
+}
+
+.wsmenu > a.header-btn {
+  height: auto !important;
+  line-height: 1 !important;
+  margin-left: 8px !important;
+  padding: 10px 22px !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  background-color: #ff4500 !important;
+  border-radius: 30px !important;
+  box-shadow: 0 4px 15px rgba(255, 69, 0, 0.25) !important;
+  transition: all 0.3s ease !important;
+}
+
+.wsmenu > a.header-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 69, 0, 0.35) !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   DESKTOP COUNTRIES DROPDOWN
+   ========================================================================== */
+
+.wsmenu-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 70px;
+}
+
+.wsmenu-dropdown > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #2c3e50;
+  font-family: 'Muli', 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 8px 6px;
+  height: 70px;
+  line-height: 1;
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.wsmenu-dropdown > a:hover {
+  color: #ff4500;
+}
+
+.wsmenu-dropdown > a::after {
+  content: '';
+  position: absolute;
+  bottom: 16px;
+  left: 6px;
+  right: 6px;
+  height: 2.5px;
+  background-color: #ff4500;
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.wsmenu-dropdown:hover > a::after,
+.wsmenu-dropdown.active > a::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.wsmenu-dropdown-menu {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  padding: 12px 14px;
+  min-width: 440px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease, top 0.25s ease;
+  z-index: 1000;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 8px;
+}
+
+.wsmenu-dropdown:hover .wsmenu-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 70px;
+}
+
+.wsmenu-dropdown-menu a {
+  display: flex !important;
+  align-items: center;
+  padding: 8px 12px !important;
+  color: #334155 !important;
+  font-family: 'Muli', 'Roboto', sans-serif;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  text-align: left !important;
+  height: auto !important;
+  line-height: 1.4 !important;
+  border-bottom: none !important;
+  border-radius: 6px;
+  transition: all 0.2s ease !important;
+  background: transparent !important;
+}
+
+.wsmenu-dropdown-menu a:last-child {
+  border-bottom: none !important;
+}
+
+.wsmenu-dropdown-menu a::after {
+  display: none !important;
+}
+
+.wsmenu-dropdown-menu a:hover {
+  background-color: #f1f5f9 !important;
+  color: #ff4500 !important;
+  padding-left: 16px !important;
+}
+
+/* Dropdown Scrollbar */
+.wsmenu-dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.wsmenu-dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+.wsmenu-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.wsmenu-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.wsmobileheader {
+  display: none;
+}
+
+.overlapblackbg {
+  display: none;
+}
+
+.wsmenu-close-bar {
+  display: none !important;
+}
+
+/* ==============================================================================
+   RESPONSIVE MOBILE & TABLET NAVIGATION DRAWER (max-width: 991.95px)
+   ============================================================================== */
+
+@media only screen and (max-width: 991.95px) {
+
+  /* Base Body Fixes */
+  html, body {
+    overflow-x: hidden !important;
+    height: auto !important;
+  }
+
+  body.wsactive {
+    overflow: hidden !important;
+  }
+
+  /* Desktop Logo hidden on mobile header */
+  .desktoplogo {
+    display: none !important;
+  }
+
+  /* Header Top Strip on Mobile */
+  .headtoppart {
+    display: none !important;
+  }
+
+  /* Mobile Header Bar */
+  .wsmobileheader {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 65px !important;
+    background: #ffffff !important;
+    padding: 0 16px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+    z-index: 100005 !important;
+  }
+
+  .wsmobileheader .smllogo img {
+    max-height: 48px !important;
+    width: auto !important;
+    vertical-align: middle !important;
+  }
+
+  .wsmobileheader .callusbtn {
+    font-size: 18px !important;
+    color: #ff4500 !important;
+    padding: 8px !important;
+    text-decoration: none !important;
+  }
+
+  /* Animated Hamburger Toggle */
+  .wsanimated-arrow {
+    width: 32px !important;
+    height: 32px !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .wsanimated-arrow span,
+  .wsanimated-arrow span:before,
+  .wsanimated-arrow span:after {
+    cursor: pointer !important;
+    height: 3px !important;
+    width: 24px !important;
+    background: #0b1f3a !important;
+    position: absolute !important;
+    display: block !important;
+    content: '' !important;
+    border-radius: 2px !important;
+    transition: all 300ms ease-in-out !important;
+  }
+
+  .wsanimated-arrow span:before {
+    top: -8px !important;
+  }
+
+  .wsanimated-arrow span:after {
+    bottom: -8px !important;
+  }
+
+  body.wsactive .wsanimated-arrow span {
+    background-color: transparent !important;
+  }
+
+  body.wsactive .wsanimated-arrow span:before {
+    top: 0 !important;
+    transform: rotate(45deg) !important;
+    background: #ff4500 !important;
+  }
+
+  body.wsactive .wsanimated-arrow span:after {
+    bottom: 0 !important;
+    transform: rotate(-45deg) !important;
+    background: #ff4500 !important;
+  }
+
+  /* Navigation Slide-Out Drawer */
+  .wsmainfull {
+    height: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .wsmenu {
+    position: fixed !important;
+    top: 65px !important;
+    left: -320px !important;
+    width: 290px !important;
+    max-width: 85vw !important;
+    height: calc(100vh - 65px) !important;
+    background: #ffffff !important;
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.15) !important;
+    z-index: 100000 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 15px 0 50px 0 !important;
+    margin: 0 !important;
+    visibility: visible !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  body.wsactive .wsmenu {
+    left: 0 !important;
+  }
+
+  /* Mobile Drawer Close Bar */
+  .wsmenu-close-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 18px !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    position: relative !important;
+    z-index: 100005 !important;
+    pointer-events: auto !important;
+    height: auto !important;
+    line-height: 1.4 !important;
+  }
+
+  .wsmenu-close-title {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    color: #64748b !important;
+  }
+
+  .wsmenu-close-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #ff4500 !important;
+    background: #fff0eb !important;
+    padding: 5px 12px !important;
+    border-radius: 20px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .wsmenu-close-btn:hover,
+  .wsmenu-close-btn:active {
+    background: #ff4500 !important;
+    color: #ffffff !important;
+  }
+
+
+
+  body.wsactive .overlapblackbg {
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+  /* Mobile Drawer Links - direct nav items */
+  .wsmenu > a {
+    position: relative !important;
+    z-index: 100005 !important;
+    pointer-events: auto !important;
+    display: block !important;
+    padding: 14px 22px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #0b1f3a !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    height: auto !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    background: #ffffff !important;
+    width: 100% !important;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+
+  .wsmenu > a:hover,
+  .wsmenu > a.active {
+    color: #ff4500 !important;
+    background: #f8fafc !important;
+  }
+
+  .wsmenu > a::after {
+    display: none !important;
+  }
+
+  .wsmenu > a.header-btn {
+    margin: 20px 20px 10px 20px !important;
+    text-align: center !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    display: block !important;
+    color: #ffffff !important;
+    background-color: #ff4500 !important;
+    width: auto !important;
+  }
+
+  /* Mobile Countries Dropdown Accordion */
+  .wsmenu-dropdown {
+    position: relative !important;
+    z-index: 100005 !important;
+    pointer-events: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    background: #ffffff !important;
+  }
+
+  .wsmenu-dropdown > a {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 14px 22px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #0b1f3a !important;
+    height: auto !important;
+    line-height: 1.4 !important;
+    cursor: pointer !important;
+    background: #ffffff !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 100005 !important;
+  }
+
+  .wsmenu-dropdown > a::after {
+    display: none !important;
+  }
+
+  .wsmenu-dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #f8fafc !important;
+    max-height: none !important;
+    padding: 4px 0 !important;
+    display: none !important;
+    grid-template-columns: 1fr !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .wsmenu-dropdown.is-open .wsmenu-dropdown-menu {
+    display: block !important;
+  }
+
+  .wsmenu-dropdown-menu a {
+    padding: 11px 20px 11px 36px !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    border-bottom: 1px solid #eef2f6 !important;
+    display: block !important;
+    background: transparent !important;
+    line-height: 1.4 !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 100005 !important;
+  }
+
+  .wsmenu-dropdown-menu a:hover {
+    color: #ff4500 !important;
+    background: #ffffff !important;
+    padding-left: 40px !important;
+  }
+}

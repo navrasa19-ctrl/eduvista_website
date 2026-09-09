@@ -1,0 +1,952 @@
+/* ==========================================================================
+   EDUVISTA ORGANOGRAM STYLESHEET
+   =========================================================================== */
+
+:root {
+  /* Core Theme Colors */
+  --org-dark-blue: #0b1f3a;
+  --org-green: #0a7c52;
+  --org-blue: #005691;
+  --org-text-dark: #1e293b;
+  --org-text-muted: #64748b;
+  --org-border-light: #e2e8f0;
+  
+  /* 10 Department Colors (Matching the image) */
+  --c-academic: #1b75bc;
+  --c-academic-bg: #f0f7fc;
+  
+  --c-career: #43a047;
+  --c-career-bg: #f1f8f2;
+  
+  --c-teacher: #7b1fa2;
+  --c-teacher-bg: #f8f1fa;
+  
+  --c-setup: #e65100;
+  --c-setup-bg: #fff3e0;
+  
+  --c-edtech: #00acc1;
+  --c-edtech-bg: #e0f7fa;
+  
+  --c-quality: #f57c00;
+  --c-quality-bg: #fff8e1;
+  
+  --c-marketing: #d81b60;
+  --c-marketing-bg: #fce4ec;
+  
+  --c-admin: #0288d1;
+  --c-admin-bg: #e1f5fe;
+  
+  --c-skill: #388e3c;
+  --c-skill-bg: #e8f5e9;
+  
+  --c-research: #8d6e63;
+  --c-research-bg: #efebe9;
+}
+
+/* Main Section Styling */
+.organogram-section {
+  background: #f8fafc;
+  padding: 80px 0;
+  font-family: 'Roboto', 'Muli', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.organogram-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header Styling */
+.org-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.org-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--org-dark-blue);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.org-subtitle-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.org-subtitle-wrapper::before,
+.org-subtitle-wrapper::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--org-green);
+}
+
+.org-header .subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--org-green);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Common Card Styling */
+.org-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.org-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Tier 1: Board of Directors & Chairperson & MD */
+.org-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.org-exec-card {
+  width: 320px;
+  padding: 15px 20px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.org-exec-card .org-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.org-exec-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.org-exec-card p {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.org-board {
+  background: linear-gradient(135deg, #062c75 0%, #061224 100%);
+  border: 1px solid #114198;
+}
+
+.org-chairperson {
+  background: linear-gradient(135deg, #0a7c52 0%, #043d28 100%);
+  border: 1px solid #0e9664;
+}
+
+.org-md {
+  background: linear-gradient(135deg, #005691 0%, #002e4f 100%);
+  border: 1px solid #006cb5;
+}
+
+/* Advisory Council (connected horizontally to MD) */
+.org-md-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.org-advisory-wrapper {
+  position: absolute;
+  left: calc(50% + 200px);
+  display: flex;
+  align-items: center;
+}
+
+.org-advisory-line {
+  width: 60px;
+  height: 2px;
+  border-top: 2px dashed #94a3b8;
+}
+
+.org-advisory {
+  width: 200px;
+  padding: 10px 15px;
+  background: #ffffff;
+  border: 1px solid var(--org-border-light);
+  color: var(--org-text-dark);
+  text-align: center;
+}
+
+.org-advisory h4 {
+  color: var(--org-dark-blue);
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+  text-transform: uppercase;
+}
+
+.org-advisory p {
+  color: var(--org-text-muted);
+  font-size: 10px;
+  margin: 0;
+}
+
+.org-advisory .org-icon {
+  font-size: 16px;
+  color: var(--org-dark-blue);
+  margin-bottom: 4px;
+}
+
+/* Executive connectors */
+.org-v-line {
+  width: 2px;
+  height: 25px;
+  background-color: #94a3b8;
+  position: relative;
+}
+
+/* Tier 2: Chief Officers (C-Suite) */
+.org-chiefs-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.org-chief-card {
+  background: linear-gradient(135deg, #0c2340 0%, #05101e 100%);
+  border: 1px solid #1a365d;
+  padding: 12px 10px;
+  color: #ffffff;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+.org-chief-card .org-icon {
+  font-size: 20px;
+  min-width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+}
+
+.org-chief-card-body {
+  text-align: left;
+}
+
+.org-chief-card h4 {
+  font-size: 11px;
+  font-weight: 700;
+  margin: 0 0 3px 0;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  /* color: lightsteelblue; */
+}
+
+.org-chief-card p {
+  font-size: 9px;
+  opacity: 0.85;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Tier 3: Divisional Columns (10 Functional Divisions) */
+.org-divisions-row {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.org-dept-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--org-border-light);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.org-dept-header {
+  padding: 12px 8px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-height: 90px;
+  justify-content: center;
+}
+
+.org-dept-header .org-icon {
+  font-size: 20px;
+}
+
+.org-dept-header h4 {
+  font-size: 11px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.org-dept-body {
+  padding: 12px 8px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.org-dept-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.org-dept-body li {
+  font-size: 10px;
+  line-height: 1.3;
+  color: var(--org-text-dark);
+  position: relative;
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.org-dept-body li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Color mappings for 10 Departments */
+.dept-academic .org-dept-header { background-color: var(--c-academic); }
+.dept-academic { background-color: var(--c-academic-bg); border-color: rgba(27, 117, 188, 0.2); }
+.dept-academic .org-dept-body li::before { color: var(--c-academic); }
+
+.dept-career .org-dept-header { background-color: var(--c-career); }
+.dept-career { background-color: var(--c-career-bg); border-color: rgba(67, 160, 71, 0.2); }
+.dept-career .org-dept-body li::before { color: var(--c-career); }
+
+.dept-teacher .org-dept-header { background-color: var(--c-teacher); }
+.dept-teacher { background-color: var(--c-teacher-bg); border-color: rgba(123, 31, 162, 0.2); }
+.dept-teacher .org-dept-body li::before { color: var(--c-teacher); }
+
+.dept-setup .org-dept-header { background-color: var(--c-setup); }
+.dept-setup { background-color: var(--c-setup-bg); border-color: rgba(230, 81, 0, 0.2); }
+.dept-setup .org-dept-body li::before { color: var(--c-setup); }
+
+.dept-edtech .org-dept-header { background-color: var(--c-edtech); }
+.dept-edtech { background-color: var(--c-edtech-bg); border-color: rgba(0, 172, 193, 0.2); }
+.dept-edtech .org-dept-body li::before { color: var(--c-edtech); }
+
+.dept-quality .org-dept-header { background-color: var(--c-quality); }
+.dept-quality { background-color: var(--c-quality-bg); border-color: rgba(245, 124, 0, 0.2); }
+.dept-quality .org-dept-body li::before { color: var(--c-quality); }
+
+.dept-marketing .org-dept-header { background-color: var(--c-marketing); }
+.dept-marketing { background-color: var(--c-marketing-bg); border-color: rgba(216, 27, 96, 0.2); }
+.dept-marketing .org-dept-body li::before { color: var(--c-marketing); }
+
+.dept-admin .org-dept-header { background-color: var(--c-admin); }
+.dept-admin { background-color: var(--c-admin-bg); border-color: rgba(2, 136, 209, 0.2); }
+.dept-admin .org-dept-body li::before { color: var(--c-admin); }
+
+.dept-skill .org-dept-header { background-color: var(--c-skill); }
+.dept-skill { background-color: var(--c-skill-bg); border-color: rgba(56, 142, 60, 0.2); }
+.dept-skill .org-dept-body li::before { color: var(--c-skill); }
+
+.dept-research .org-dept-header { background-color: var(--c-research); }
+.dept-research { background-color: var(--c-research-bg); border-color: rgba(141, 110, 99, 0.2); }
+.dept-research .org-dept-body li::before { color: var(--c-research); }
+
+/* Tier 4: International Student Support Services Container */
+.org-support-services {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid var(--org-blue);
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.org-support-header {
+  background-color: var(--org-blue);
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.org-support-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 20px 15px;
+  gap: 15px;
+}
+
+.org-support-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s;
+}
+
+.org-support-item:hover {
+  transform: translateY(-3px);
+}
+
+.org-support-item .org-icon {
+  font-size: 24px;
+  color: var(--org-blue);
+  margin-bottom: 10px;
+  height: 48px;
+  width: 48px;
+  background: #f0f7fc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.org-support-item:hover .org-icon {
+  background: var(--org-blue);
+  color: #ffffff;
+}
+
+.org-support-item h5 {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--org-dark-blue);
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.org-support-item p {
+  font-size: 9px;
+  color: var(--org-text-muted);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.org-support-grid-divider {
+  border-right: 1px dashed var(--org-border-light);
+}
+
+/* Tier 5: Support & Central Functions */
+.org-central-functions {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid var(--org-dark-blue);
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.org-central-header {
+  background-color: var(--org-dark-blue);
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.org-central-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 20px 15px;
+  gap: 12px;
+}
+
+.org-central-item {
+  background: #f8fafc;
+  border: 1px solid var(--org-border-light);
+  border-radius: 8px;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+.org-central-item:hover {
+  background: #ffffff;
+  border-color: var(--org-dark-blue);
+  box-shadow: 0 5px 15px rgba(11, 31, 58, 0.1);
+  transform: translateY(-2px);
+}
+
+.org-central-item .org-icon {
+  font-size: 16px;
+  color: var(--org-dark-blue);
+}
+
+.org-central-item span {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--org-dark-blue);
+  line-height: 1.2;
+}
+
+/* Slogan Footer */
+.org-slogan-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.org-slogan-wrapper i {
+  color: #f59e0b; /* Gold star */
+  font-size: 14px;
+}
+
+.org-slogan-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--org-green);
+  margin: 0;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* Tree Connecting Lines (Desktop Only) */
+@media (min-width: 992px) {
+  /* Connector from MD down to C-Suite */
+  .org-tree::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 2px;
+    height: 15px;
+    background-color: #94a3b8;
+  }
+  
+  .org-chiefs-wrapper {
+    position: relative;
+    padding-top: 15px;
+  }
+  
+  /* Horizontal line spanning C-Suite */
+  .org-chiefs-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(100% / 12);
+    right: calc(100% / 12);
+    height: 2px;
+    background-color: #94a3b8;
+  }
+  
+  /* Vertical drop line on each chief officer card */
+  .org-chiefs-row::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 2px;
+    height: 15px;
+    background-color: #94a3b8;
+    z-index: 1;
+  }
+  
+  .org-chief-card {
+    position: relative;
+  }
+  
+  .org-chief-card::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 2px;
+    height: 15px;
+    background-color: #94a3b8;
+  }
+
+  /* Connector line from C-Suite down to Departments */
+  .org-chiefs-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 2px;
+    height: 15px;
+    background-color: #94a3b8;
+  }
+
+  .org-divisions-wrapper {
+    position: relative;
+    padding-top: 15px;
+  }
+
+  /* Horizontal line spanning 10 Departments */
+  .org-divisions-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(100% / 20);
+    right: calc(100% / 20);
+    height: 2px;
+    background-color: #94a3b8;
+  }
+
+  .org-dept-card {
+    position: relative;
+  }
+
+  .org-dept-card::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 2px;
+    height: 15px;
+    background-color: #94a3b8;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVENESS (Breakdowns for Tablets & Mobile)
+   =========================================================================== */
+
+/* Large screens down to small desktops */
+@media (max-width: 1200px) {
+  .org-divisions-row {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+  
+  /* Disable tree lines for divisions when wrapped */
+  .org-divisions-wrapper::before,
+  .org-dept-card::before,
+  .org-chiefs-wrapper::after {
+    display: none;
+  }
+  
+  .org-support-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .org-support-grid-divider {
+    border-right: none;
+    border-bottom: 1px dashed var(--org-border-light);
+    padding-bottom: 15px;
+  }
+  
+  .org-central-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets and small desktops */
+@media (max-width: 991px) {
+  .org-chiefs-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  /* Disable tree lines for chiefs when wrapped */
+  .org-chiefs-wrapper::before,
+  .org-chief-card::before,
+  .org-tree::after,
+  .org-chiefs-row::before {
+    display: none;
+  }
+  
+  .org-advisory-wrapper {
+    position: static;
+    margin-top: 15px;
+    left: auto;
+    flex-direction: column;
+  }
+  
+  .org-advisory-line {
+    width: 2px;
+    height: 20px;
+    border-left: 2px dashed #94a3b8;
+    border-top: none;
+  }
+  
+  .org-md-row {
+    flex-direction: column;
+  }
+}
+
+/* Mobile Viewports */
+@media (max-width: 767px) {
+  .organogram-section {
+    padding: 50px 0;
+  }
+  
+  .org-header h2 {
+    font-size: 26px;
+  }
+  
+  .org-header .subtitle {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  
+  .org-divisions-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .org-support-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .org-central-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .org-slogan-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .org-divisions-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .org-chiefs-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .org-support-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .org-central-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .org-exec-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ==========================================================================
+   EXECUTIVE BODY SECTION
+   =========================================================================== */
+
+.exec-body-section {
+  background: #ffffff;
+  padding: 80px 0;
+  border-top: 1px solid var(--org-border-light);
+  font-family: 'Roboto', 'Muli', sans-serif;
+}
+
+.exec-body-section .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.exec-body-section .section-title h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--org-dark-blue);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.exec-body-section .section-title .subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--org-green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.exec-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 1px solid var(--org-border-light);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  max-width: 850px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.exec-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(11, 31, 58, 0.08);
+  border-color: var(--org-green);
+}
+
+.exec-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.exec-avatar-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e0f2fe;
+  color: var(--org-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.exec-title h4 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--org-dark-blue);
+  margin: 0 0 4px 0;
+}
+
+.exec-title p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--org-green);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 30px;
+}
+
+.exec-info-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.exec-info-item .info-icon {
+  font-size: 18px;
+  color: var(--org-green);
+  min-width: 36px;
+  height: 36px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.exec-card:hover .exec-info-item .info-icon {
+  background: var(--org-green);
+  color: #ffffff;
+}
+
+.exec-info-content h5 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--org-text-muted);
+  margin: 0 0 5px 0;
+  letter-spacing: 0.5px;
+}
+
+.exec-info-content p {
+  font-size: 14px;
+  color: var(--org-text-dark);
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.exec-info-content a {
+  color: var(--org-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.exec-info-content a:hover {
+  color: var(--org-green);
+  text-decoration: underline;
+}
+
+.exec-info-full {
+  grid-column: span 2;
+}
+
+@media (max-width: 767px) {
+  .exec-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .exec-info-full {
+    grid-column: span 1;
+  }
+  
+  .exec-card {
+    padding: 25px;
+  }
+  
+  .exec-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="280" height="85">
+  <g transform="translate(10, 10)">
+    <rect x="5" y="5" width="70" height="70" rx="10" fill="#003366"/>
+    <text x="40" y="48" fill="#ffffff" font-family="'Times New Roman', serif" font-size="28" font-weight="bold" text-anchor="middle">NSU</text>
+  </g>
+  <text x="96" y="40" fill="#003366" font-family="'Times New Roman', Georgia, serif" font-size="18" font-weight="bold">NORTH SOUTH</text>
+  <text x="96" y="64" fill="#003366" font-family="'Times New Roman', Georgia, serif" font-size="22" font-weight="bold">UNIVERSITY</text>
+  <text x="96" y="80" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="11">FIRST PRIVATE UNIVERSITY • BANGLADESH</text>
+</svg>

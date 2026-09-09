@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="280" height="85">
+  <g transform="translate(10, 10)">
+    <circle cx="40" cy="40" r="38" fill="#1954A6"/>
+    <circle cx="40" cy="40" r="33" fill="none" stroke="#E3B33E" stroke-width="2.5"/>
+    <path d="M 28,26 L 52,26 L 40,54 Z" fill="#E3B33E"/>
+  </g>
+  <text x="96" y="44" fill="#1954A6" font-family="'Arial Black', Impact, sans-serif" font-size="28" font-weight="900" letter-spacing="2">KTH</text>
+  <text x="96" y="66" fill="#0b1f3a" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="bold">Royal Institute of Technology</text>
+  <text x="96" y="82" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="11">STOCKHOLM • SWEDEN • EST. 1827</text>
+</svg>

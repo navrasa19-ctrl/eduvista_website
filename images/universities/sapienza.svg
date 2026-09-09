@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="280" height="85">
+  <!-- Sapienza Crimson Emblem -->
+  <g transform="translate(10, 10)">
+    <circle cx="40" cy="40" r="38" fill="#7C1024"/>
+    <circle cx="40" cy="40" r="34" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <path d="M 26,48 L 40,24 L 54,48 L 48,48 L 40,34 L 32,48 Z" fill="#ffffff"/>
+    <circle cx="40" cy="54" r="4" fill="#ffffff"/>
+  </g>
+  <!-- Typography -->
+  <text x="96" y="44" fill="#7C1024" font-family="'Times New Roman', Georgia, serif" font-size="26" font-weight="bold" letter-spacing="1">SAPIENZA</text>
+  <text x="96" y="68" fill="#0b1f3a" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="bold" letter-spacing="1.5">UNIVERSITÀ DI ROMA</text>
+</svg>
