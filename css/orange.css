@@ -2900,12 +2900,14 @@ p.header-widget-phone {
     transition: opacity 0.6s ease-in-out;
 }
 
-.slider .slides li.active {
+.slider .slides li.active,
+.slider .slides li:first-child {
     opacity: 1 !important;
     z-index: 2;
 }
 
-.slider .slides li.active .caption {
+.slider .slides li.active .caption,
+.slider .slides li:first-child .caption {
     opacity: 1 !important;
 }
 
@@ -5251,17 +5253,28 @@ p.header-widget-phone {
 /*  Testimonial Message Avatar 
 /*------------------------------------------*/
 
+.author-data {
+    display: flex;
+    align-items: center;
+}
+
 .review-1 .testimonial-avatar,
 .review-2 .testimonial-avatar {
-    display: inline-block;
-    float: left;
+    flex-shrink: 0;
+    margin-right: 15px;
+    float: none;
+}
+
+.review-author {
+    flex: 1;
+    min-width: 0;
 }
 
 #reviews-1 .owl-carousel .owl-item img {
     width: 75px;
     height: 75px;
-    display: inline-block;
-    margin: 0 15px 0 0;
+    display: block;
+    margin: 0;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -o-border-radius: 100%;
@@ -5271,7 +5284,8 @@ p.header-widget-phone {
 #reviews-2 .owl-carousel .owl-item img {
     width: 60px;
     height: 60px;
-    margin: 0 10px 0 0;
+    display: block;
+    margin: 0;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -o-border-radius: 100%;
@@ -5302,21 +5316,23 @@ p.header-widget-phone {
 
 .review-author h5 {
     font-weight: 800;
-    line-height: 1;
-    padding-top: 16px;
-    margin-bottom: 0;
+    line-height: 1.2;
+    padding-top: 0;
+    margin-bottom: 3px;
 }
 
 #reviews-2 .review-author h5 {
     font-size: 1.05rem;
-    padding-top: 12px;
-    margin-bottom: 0px;
+    padding-top: 0;
+    margin-bottom: 2px;
 }
 
 .review-author span {
+    display: block;
     color: #888;
-    font-size: 0.975rem;
-    line-height: 1;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin-top: 2px;
 }
 
 #reviews-2 .review-author span {
@@ -7108,4 +7124,396 @@ nav a#pull {
 .abox-3-icon svg {
     display: block;
     margin-bottom: 18px;
+}
+
+/* ==========================================================================
+   EDUVISTA - MODERN REFINED STUDY GUIDE & COUNTRY OVERVIEW STYLES
+   ========================================================================== */
+.country-guide-overview {
+    margin-top: 45px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 38px 34px;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.country-guide-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.1) 0%, rgba(255, 120, 0, 0.14) 100%);
+    color: #ff4500;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 69, 0, 0.25);
+    margin-bottom: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.country-guide-title {
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: 800;
+    color: #0b1f3a;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    letter-spacing: -0.3px;
+    font-family: 'Muli', sans-serif;
+}
+
+.country-guide-lead {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 32px;
+}
+
+.country-guide-lead strong {
+    color: #0b1f3a;
+    font-weight: 700;
+}
+
+/* KEY METRIC CARDS GRID */
+.guide-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    margin-bottom: 34px;
+}
+
+.guide-metric-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.guide-metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.07);
+    border-color: #cbd5e1;
+    background: #ffffff;
+}
+
+.guide-metric-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.guide-metric-icon.tuition {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.guide-metric-icon.duration {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.guide-metric-icon.psw {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.guide-metric-icon.work {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.guide-metric-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-metric-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.guide-metric-val {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0b1f3a;
+    line-height: 1.35;
+    margin-bottom: 3px;
+    font-family: 'Muli', sans-serif;
+}
+
+.guide-metric-sub {
+    font-size: 12.5px;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* NARRATIVE SECTIONS */
+.guide-narrative-section {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 26px 22px;
+    margin-bottom: 34px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.guide-narrative-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0b1f3a;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Muli', sans-serif;
+}
+
+.guide-narrative-title i {
+    color: #ff4500;
+    font-size: 18px;
+}
+
+.guide-narrative-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 22px;
+}
+
+.guide-narrative-text:last-child {
+    margin-bottom: 0;
+}
+
+.guide-narrative-text strong {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+/* INDIAN STUDENTS ADVISORY CONTAINER */
+.guide-indian-students-box {
+    background: linear-gradient(135deg, #fffbf5 0%, #fff7ed 100%);
+    border: 1.5px solid #fed7aa;
+    border-radius: 16px;
+    padding: 30px 26px;
+    margin-bottom: 34px;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(234, 88, 12, 0.04);
+}
+
+.guide-indian-title {
+    font-size: 19px;
+    font-weight: 800;
+    color: #9a3412;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Muli', sans-serif;
+}
+
+.guide-indian-title i {
+    color: #ea580c;
+}
+
+.guide-indian-intro {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #7c2d12;
+    margin-bottom: 22px;
+}
+
+.guide-indian-intro strong {
+    color: #431407;
+    font-weight: 700;
+}
+
+.guide-indian-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.guide-indian-card {
+    background: #ffffff;
+    border: 1px solid #ffedd5;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guide-indian-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(234, 88, 12, 0.08);
+    border-color: #fdba74;
+}
+
+.guide-indian-card-head {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #9a3412;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Muli', sans-serif;
+}
+
+.guide-indian-card-desc {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #475569;
+    margin: 0;
+}
+
+.guide-indian-card-desc strong {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+/* ADMISSIONS STRIP */
+.guide-admissions-strip {
+    background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%) !important;
+    border: 1px solid #bae6fd !important;
+    border-radius: 14px !important;
+    padding: 18px 22px !important;
+    margin-bottom: 30px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    align-items: center !important;
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.05);
+}
+
+.guide-admissions-strip > div {
+    font-size: 14.5px !important;
+    color: #0b1f3a !important;
+    line-height: 1.5 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.guide-admissions-strip > div i {
+    color: #0284c7 !important;
+    font-size: 16px !important;
+}
+
+/* HIGHLIGHTS GRID */
+.guide-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.guide-highlight-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #3b82f6;
+    border-radius: 12px;
+    padding: 18px;
+    transition: all 0.25s ease;
+}
+
+.guide-highlight-item:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.guide-highlight-item.accent-green {
+    border-left-color: #10b981;
+}
+
+.guide-highlight-item.accent-orange {
+    border-left-color: #f59e0b;
+}
+
+.guide-highlight-item.accent-purple {
+    border-left-color: #8b5cf6;
+}
+
+.guide-highlight-head {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #0b1f3a;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Muli', sans-serif;
+}
+
+.guide-highlight-desc {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #64748b;
+    margin: 0;
+}
+
+.guide-highlight-desc strong {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* RESPONSIVE MOBILE STYLES */
+@media (max-width: 768px) {
+    .country-guide-overview {
+        padding: 24px 18px;
+        margin-top: 30px;
+        border-radius: 16px;
+    }
+    .country-guide-title {
+        font-size: 20px;
+        line-height: 1.35;
+    }
+    .country-guide-lead {
+        font-size: 14.5px;
+        line-height: 1.7;
+        margin-bottom: 24px;
+    }
+    .guide-metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .guide-indian-students-box {
+        padding: 20px 16px;
+    }
+    .guide-indian-title {
+        font-size: 17px;
+    }
+    .guide-indian-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .guide-admissions-strip {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding: 16px !important;
+    }
+    .guide-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
 }

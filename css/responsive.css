@@ -6350,7 +6350,9 @@
   }
 
   /* Disable & Hide Scroll to Top Button */
-  #scrollUp, #scroll-top, .scroll-to-top {
+  #scrollUp,
+  #scroll-top,
+  .scroll-to-top {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
@@ -6396,7 +6398,9 @@
 }
 
 /* Disable & Hide Scroll to Top Button Globally */
-#scrollUp, #scroll-top, .scroll-to-top {
+#scrollUp,
+#scroll-top,
+.scroll-to-top {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
@@ -6409,13 +6413,16 @@
    ============================================================================== */
 
 /* Fluid Images & Media */
-img, video, iframe {
+img,
+video,
+iframe {
   max-width: 100% !important;
   height: auto;
 }
 
 /* Prevent Horizontal Body Scrolling */
-html, body {
+html,
+body {
   max-width: 100vw !important;
   overflow-x: hidden !important;
 }
@@ -6542,13 +6549,16 @@ html, body {
 
 /* Desktop Header Clearance & Full Hero Visibility (min-width: 992px) */
 @media (min-width: 992px) {
+
   #header-1.header,
   #header-2.header {
     height: 145px !important;
   }
+
   #breadcrumb {
     margin-top: 0 !important;
   }
+
   #hero-2.hero-section {
     margin-top: 0 !important;
     padding-top: 0 !important;
@@ -6560,18 +6570,20 @@ html, body {
 
 /* Tablet Breakpoints (max-width: 991.95px) */
 @media (max-width: 991.95px) {
-  
+
   #header-1.header,
   #header-2.header {
     height: 65px !important;
   }
+
   .wsmobileheader {
     height: 65px !important;
   }
+
   #breadcrumb {
     margin-top: 0 !important;
   }
-  
+
   /* Container Padding */
   .container {
     padding-left: 20px !important;
@@ -6583,9 +6595,11 @@ html, body {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
+
   #hero-2 .slider {
     aspect-ratio: 1600 / 600 !important;
   }
+
   .hero-slider-dots {
     bottom: 14px !important;
   }
@@ -6602,6 +6616,7 @@ html, body {
     padding: 18px 16px !important;
     margin-bottom: 25px !important;
   }
+
   .filter-select {
     font-size: 13.5px !important;
     height: 46px !important;
@@ -6616,24 +6631,30 @@ html, body {
   .edu-custom-modal-overlay {
     padding: 15px 10px !important;
   }
+
   .edu-custom-modal-container {
     width: 96% !important;
     max-width: 96% !important;
     border-radius: 10px !important;
   }
+
   .edu-modal-header {
     padding: 14px 18px !important;
   }
+
   .edu-modal-title {
     font-size: 17px !important;
   }
+
   .edu-modal-body {
     padding: 16px !important;
     max-height: 75vh !important;
   }
+
   .modal-course-item {
     padding: 14px 14px !important;
   }
+
   .modal-course-item .course-specs {
     grid-template-columns: 1fr !important;
     gap: 8px !important;
@@ -6650,11 +6671,12 @@ html, body {
 
 /* Small Smartphone Breakpoints (max-width: 575.95px) */
 @media (max-width: 575.95px) {
-  
+
   #header-1.header,
   #header-2.header {
     height: 65px !important;
   }
+
   .wsmobileheader {
     height: 65px !important;
   }
@@ -6672,11 +6694,13 @@ html, body {
     padding-top: 0 !important;
     width: 100% !important;
   }
+
   #hero-2 .slider {
     aspect-ratio: 1600 / 600 !important;
     min-height: 140px !important;
     width: 100% !important;
   }
+
   #hero-2 .slider .slides li img {
     height: 100% !important;
     width: 100% !important;
@@ -6684,15 +6708,18 @@ html, body {
     object-position: center top !important;
     display: block !important;
   }
+
   .hero-slider-dots {
     bottom: 8px !important;
     gap: 5px !important;
   }
+
   .hero-slider-dots li {
     width: 6px !important;
     height: 6px !important;
     border-width: 1px !important;
   }
+
   .hero-slider-dots li.active {
     width: 16px !important;
     border-radius: 4px !important;
@@ -6702,16 +6729,20 @@ html, body {
   .uni-card-exact {
     padding: 20px 15px !important;
   }
+
   .uni-name-exact {
     font-size: 16px !important;
   }
+
   .course-name-exact {
     font-size: 14.5px !important;
   }
+
   .card-buttons-exact {
     flex-direction: column !important;
     gap: 8px !important;
   }
+
   .btn-exact-view,
   .btn-exact-apply {
     width: 100% !important;
@@ -6725,7 +6756,8 @@ html, body {
   input[type="tel"],
   select,
   textarea {
-    font-size: 16px !important; /* Prevents iOS auto-zoom */
+    font-size: 16px !important;
+    /* Prevents iOS auto-zoom */
   }
 
   /* Call-to-action buttons */
@@ -6780,7 +6812,8 @@ html, body {
   transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-#hero-2 .slider .slides li.active {
+#hero-2 .slider .slides li.active,
+#hero-2 .slider .slides li:first-child {
   opacity: 1 !important;
   visibility: visible !important;
   z-index: 2 !important;
@@ -6819,11 +6852,13 @@ html, body {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
+
   #hero-2 .slider,
   #hero-2 .slider .slides,
   #hero-2 .slider .slides li {
     max-height: 580px !important;
   }
+
   #about-3 {
     margin-top: -60px !important;
     position: relative !important;
@@ -6837,11 +6872,13 @@ html, body {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
+
   #hero-2 .slider,
   #hero-2 .slider .slides,
   #hero-2 .slider .slides li {
     max-height: 450px !important;
   }
+
   #about-3 {
     margin-top: -30px !important;
     position: relative !important;
@@ -6855,20 +6892,22 @@ html, body {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
+
   #hero-2 .slider,
   #hero-2 .slider .slides,
   #hero-2 .slider .slides li {
     min-height: 140px !important;
     max-height: 380px !important;
   }
+
   #about-3 {
     margin-top: 15px !important;
     position: relative !important;
     z-index: 99 !important;
   }
+
   .hero-slider-dots {
     bottom: 6px !important;
     gap: 5px !important;
   }
 }
-
